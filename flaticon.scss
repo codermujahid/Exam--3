@@ -1,0 +1,45 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?1956863839a3ac070f92b8502e7a17ac") format("truetype"),
+url("./flaticon.woff?1956863839a3ac070f92b8502e7a17ac") format("woff"),
+url("./flaticon.woff2?1956863839a3ac070f92b8502e7a17ac") format("woff2"),
+url("./flaticon.eot?1956863839a3ac070f92b8502e7a17ac#iefix") format("embedded-opentype"),
+url("./flaticon.svg?1956863839a3ac070f92b8502e7a17ac#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "airplane": "\f101",
+    "call": "\f102",
+    "mail": "\f103",
+    "map": "\f104",
+    "time": "\f105",
+);
+
+.flaticon-airplane:before {
+    content: map-get($flaticon-map, "airplane");
+}
+.flaticon-call:before {
+    content: map-get($flaticon-map, "call");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon-map, "mail");
+}
+.flaticon-map:before {
+    content: map-get($flaticon-map, "map");
+}
+.flaticon-time:before {
+    content: map-get($flaticon-map, "time");
+}
